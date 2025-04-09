@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee&Wifi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+{%block navigation%}
+<body>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                <span class="fs-4">Coffee&Wifi</span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{{url_for('home')}}" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="{{url_for('all_cafes')}}" class="nav-link">Cafes</a></li>
+                <li class="nav-item"><a href="{{url_for('add_cafes')}}" class="nav-link">Add Cafe</a></li>
+            </ul>
+        </header>
+    </div>
+{%endblock%}
+
+
+
+{%block body%}
+
+    <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">Welcome to Coffee & WiFi – Your Ultimate Cafe Finder!</h1>
+            <p class="lead mb-4">Find the best cafes with WiFi and power outlets!</p>
+        </div>
+    </div>
+{%endblock%}
+
+
+
+{%block slides%}
+    <!-- Bootstrap Carousel -->
+    <div class="container">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{url_for('static',filename='images/coffee_1.jpg')}}" class="d-block w-100" alt="First coffee image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static',filename='images/coffee_2.jpg')}}" class="d-block w-100" alt="Second coffee image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static',filename='images/coffee_3.jpg')}}" class="d-block w-100" alt="Third coffee image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static',filename='images/coffee_4.jpg')}}" class="d-block w-100" alt="Fourth coffee image">
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+{%endblock%}
+    <!-- Bootstrap JS (ensure it's at the end of <body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+{% block footer %}
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-body-secondary">© 2025 Coffee&Wifi </p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" aria-label="Bootstrap">
+            <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="{{url_for('home')}}" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          </ul>
+        </footer>
+      </div>
+
+{%endblock%}
+
+</html>

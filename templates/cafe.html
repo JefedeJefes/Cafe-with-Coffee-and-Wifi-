@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{%block navigation%} 
+{{ super() }} 
+{%endblock%}
+
+{%block list%}
+
+<div class="container">
+<div class="bd-example">
+    <table class="table table-striped">
+        <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Cafe Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Open</th>
+        <th scope="col">Close</th>
+        <th scope="col">Coffee</th>
+        <th scope="col">Wifi</th>
+        <th scope="col">Power</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for cafe in cafes %}
+        <th scope="row">{{loop.index}}</th>
+        <td>{{cafe["Cafe Name"]}}</td>
+        <td><a href="{{ cafe['Location'] }}">{{ cafe['Location'] }}</a></td>
+        <td>{{cafe["Open"]}}</td>
+        <td>{{cafe["Close"]}}</td>
+        <td>{{cafe["Coffee"]}}</td>
+        <td>{{cafe["Wifi"]}}</td>
+        <td>{{cafe["Power"]}}</td>
+        
+      </tr>
+      {%endfor%}
+      
+    </tbody>
+  
+    </table>
+  </div>
+</div>
+  {%endblock%}
+
+  {%block footer%} 
+  {{ super() }} 
+  {%endblock%}
