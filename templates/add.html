@@ -13,25 +13,25 @@
       <legend>Add Cafes</legend>
       <div class="mb-3">
         <label for="Name" class="form-label" >Name</label>
-        <input type="text" id="disabledTextInput" name="cafe_name"class="form-control" placeholder="Enter Your Name">
+        <input type="text" id="cafe_name" name="cafe_name"class="form-control" placeholder="Enter Your Name" required maxlength="70">
       </div>
       <div class="mb-3">
         <label for="location" class="form-label" >Location</label>
-        <input type="text" id="disabledTextInput" name="location" class="form-control" placeholder="Enter Location link from Map">
+        <input type="text" id="cafe_location" name="location" class="form-control" placeholder="Enter Location link from Map" required>
       </div>
       <div class="mb-3">
-        <label for="open" class="form-label" name="open">Open</label>
-        <input type="text" name="open" id="disabledTextInput" class="form-control" placeholder="When does the cafe open?">
+        <label for="open" class="form-label" >Open</label>
+        <input type="text" name="open" id="open" class="form-control" placeholder="When does the cafe open?" required >
       </div>
       <div class="mb-3">
-        <label for="close" class="form-label" name="close">Close</label>
-        <input type="text" id="disabledTextInput" name="close" class="form-control" placeholder="When does the cafe close?">
+        <label for="close" class="form-label" >Close</label>
+        <input type="text" id="close" name="close" class="form-control" placeholder="When does the cafe close?" required>
       </div>
       
       <div class="mb-3">
-        <label for="coffee" class="form-label" placeholder="Select from the drop down" name="coffee">Coffee</label>
-        <select id="disabledSelect" name="coffee" class="form-select">
-            <option>Select from the drop Down</option>
+        <label for="coffee" class="form-label" placeholder="Select from the drop down">Coffee</label>
+        <select id="coffee" name="coffee" class="form-select" required>
+          <option value="" disabled selected>Select from the drop Down</option>
           <option>☕☕☕☕☕</option>
           <option>☕☕☕☕</option>
           <option>☕☕☕</option>
@@ -42,9 +42,9 @@
         </select>
       </div>
       <div class="mb-3">
-        <label for="wifi" class="form-label" name="wifi">Wifi</label>
-        <select id="disabledSelect" name="wifi" class="form-select">
-            <option>Select from the drop Down</option>
+        <label for="wifi" class="form-label"  >Wifi</label>
+        <select id="wifi" name="wifi" class="form-select" required>
+          <option value="" disabled selected>Select from the drop Down</option>
           <option>💪💪💪💪💪</option>
           <option>💪💪💪💪</option>
           <option>💪💪💪</option>
@@ -54,9 +54,9 @@
         </select>
       </div>
       <div class="mb-3">
-        <label for="power" class="form-label" name="power">Power</label>
-        <select id="disabledSelect" name="power" class="form-select">
-            <option>Select from the drop Down</option>
+        <label for="power" class="form-label" >Power</label>
+        <select id="power" name="power" class="form-select" required>
+          <option value="" disabled selected>Select from the drop Down</option>
           <option>🔌🔌🔌🔌🔌</option>
           <option>🔌🔌🔌🔌</option>
           <option>🔌🔌🔌</option>
@@ -67,14 +67,7 @@
         </select>
       </div>
       
-      <div class="mb-3">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" >
-          <label class="form-check-label" for="disabledFieldsetCheck">
-            
-          </label>
-        </div>
-      </div>
+      
       <button type="submit" class="btn btn-primary">Submit</button>
     </fieldset>
   </form>
